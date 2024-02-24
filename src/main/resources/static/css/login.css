@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/music1.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Set text color to be visible against the background */
+}
+
+h1 {
+    color: #333;
+}
+.user-login {
+    color: white; /* Change this to your desired color for the "User LOGIN:" text */
+}
+.email {
+    color: black; /* Change this to your desired color for the "User LOGIN:" text */
+}
+.password {
+    color: black; /* Change this to your desired color for the "User LOGIN:" text */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}

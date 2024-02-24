@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/images/cus.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Add opacity to the container */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+		    text-align: center; /* Center align the heading */
+		    margin-top: 0; /* Remove default margin */
+		    margin-bottom: 20px; /* Add margin to bottom */
+		}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Customer Home</h1>
+        <div th:unless="${isPremium}" class="non-premium">
+            <a href="pay" class="btn btn-primary">Get premium</a>
+            <a href="logout" class="btn btn-secondary">LOGOUT</a>
+        </div>
+        
+        <div th:if="${isPremium}" class="premium">
+            <!-- Button to view favorites -->
+            <a href="/favorites" class="btn btn-outline-success mb-3">View Favorites</a>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                        <th>Play</th>
+                        <th>Add to Favorite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="song : ${songs}">
+                        <td th:text="${song.name}"></td>
+                        <td th:text="${song.artist}"></td>
+                        <td th:text="${song.genre}"></td>
+                        <td>
+                            <audio controls>
+                                <source th:src="${song.link}" type="audio/mpeg">
+                            </audio>
+                        </td>
+                        <td>
+                            <form th:action="@{/addFavorite}" method="post">
+                                <input type="hidden" name="songId" th:value="${song.id}">
+                                <button type="submit" class="btn btn-outline-danger">❤ Add to Favorites</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>

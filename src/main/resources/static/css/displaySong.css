@@ -1,0 +1,47 @@
+body {
+    background-image: url('/images/dis.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffff80; /* Change the background color of the entire table */
+}
+
+thead {
+    background-color: green;
+    color: #ffffff;
+}
+
+th.name-column {
+    width: 20%;
+}
+
+th.play-column {
+    width: 40%;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffff80;
+}
+
+audio {
+    width: 100%;
+}audio::-webkit-media-controls {
+    display: flex !important;
+}

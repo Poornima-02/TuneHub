@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('/images/dplay.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    margin: 0;
+    background-position: center;
+    text-align: center;
+    font-family: Arial, sans-serif;   
+    padding: 20px;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table horizontally and add some top margin */
+}
+
+h1 {
+    text-align: center;
+}
+
+thead {
+    background-color: #800040;
+    color: #ffffff;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody {
+    background-color: #ff80ff;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px; /* Increase or decrease the margin as needed */
+}
+
+audio {
+    width: 70%;
+    display: block;
+    margin-top: 5px;
+    position:left;
+}

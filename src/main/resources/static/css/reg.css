@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/images/mu.jpg') center center fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff; 
+}
+.user-reg {
+    color: black; 
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.user-reg {
+    color: black; 
+}
+.input-container {
+    text-align: center;
+}
+
+.input-container label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.gender-label,
+.role-label {
+    text-align: left; 
+    
+}
+
+.m-label,
+.f-label,
+.o-label,
+.admin-label,
+.customer-label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.username-label,
+.email-label,
+.password-label,
+.address-label {
+    font-family: 'Poppins', sans-serif;
+}
+label {
+    color: black; 
+}
+
+.m-label,
+.f-label,
+.o-label,
+.a-label,
+.c-label {
+    font-family: 'Verdana', sans-serif; 
+}
+
+.input-container textarea {
+    width: 100%;
+}
+input[type="submit"] {
+    display: block;
+    margin: 0 auto; 
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

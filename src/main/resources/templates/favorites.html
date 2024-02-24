@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+	        body {
+	            background-image: url('/images/cus.jpg');
+	            background-size: cover;
+	            background-repeat: no-repeat;
+	            background-attachment: fixed;
+	        }
+	        .container {
+	            background-color: rgba(255, 255, 255, 0.7); /* Add opacity to the container */
+	            padding: 20px;
+	            border-radius: 10px;
+	            margin-top: 50px;
+	        }
+	        h1 {
+			    text-align: center; /* Center align the heading */
+			    margin-top: 0; /* Remove default margin */
+			    margin-bottom: 20px; /* Add margin to bottom */
+			}
+	    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Favorites</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Artist</th>
+                    <th>Genre</th>
+                    <th>Play</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through favorite songs and display them -->
+                <tr th:each="song : ${favorites}">
+                    <td th:text="${song.name}"></td>
+                    <td th:text="${song.artist}"></td>
+                    <td th:text="${song.genre}"></td>
+                    <td>
+                        <audio controls>
+                            <source th:src="${song.link}" type="audio/mpeg">
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

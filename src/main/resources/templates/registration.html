@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+<link rel="stylesheet" th:href="@{/css/reg.css}">
+</head>
+<body>
+
+<h1 class="user-reg">User Registration:</h1>
+
+	<form action="register" method="post">
+		<label class="user-name">User name : </label>
+		<input type = "text" name = "username"/>
+		<br>
+		<label class="email">Email : </label>
+		<input type = "email" name = "email"/>
+		<br>
+		<label class="password">Password : </label>
+		<input type = "password" name = "password"/>
+		<br>
+		<div class="gender-label">
+		<label class="gender">Gender : 
+		
+		M<input class="m-label"type = "radio" name = "gender" value = "male"/>
+		
+		F<input class="f-label"type = "radio" name = "gender" value = "female"/>
+		
+		O<input class="o-label"type = "radio" name = "gender" value = "other"/>
+		</label>
+		</div>
+		<br>
+		<div class="role-label">
+		<label class="role">Role : 
+		
+		Admin<input class="a-label" type = "radio" name = "role" value = "admin"/>
+		
+		Customer<input class="c-label" type = "radio" name = "role" value = "customer"/>
+		</label>
+		</div>
+		<br>
+		<label class="address">Address : </label>
+		<textarea name = "address"></textarea>
+		<br>
+		<input type="submit" />
+				
+	</form>
+
+</body>
+</html>

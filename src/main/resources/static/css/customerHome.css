@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/customerHome.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: black; 
+}
+.favorite-btn {
+    background: none;
+    border: none;
+    color: red; /* Change the color as needed */
+    cursor: pointer;
+    font-size: 24px; /* Adjust the size as needed */
+    outline: none;
+}
+
+h1 {
+    text-align: center; /* Center align the heading */
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 20px; /* Add margin to bottom */
+}
+
+.premium {
+    margin-top: 20px; 
+}
+
+table {
+    margin: 0 auto; /* Center align the table horizontally */
+}
